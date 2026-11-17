@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Page 1 de Personne B : la galerie de recettes (Grid) + le tableau comparatif + le PDF -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Obligatoire pour que le site s'adapte aux téléphones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- En-tête commun : même menu sur toutes les pages -->
+  <header class="site-header">
+    <a href="index.html" class="logo">My Kitchen</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recettes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>All our recipes</h1>
+    <p>Six simple recipes you can make at home.</p>
+
+    <div class="intro">
+  <aside class="tip">
+    <h3>Tip</h3>
+    <p>Make the <span class="highlight">hummus</span> the day before for a stronger taste.</p>
+  </aside>
+</div>
+    <!-- GALERIE : display: grid. Chaque recette est un <article> -->
+    <section class="gallery">
+      <article class="card">
+        <img src="images/recipe1.jpg" alt="A bowl of hummus with olive oil">
+        <h2>Hummus</h2>
+        <p>Chickpeas, tahini, lemon.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/recipe2.jpg" alt="Shakshuka in a pan">
+        <h2>Shakshuka</h2>
+        <p>Eggs in a spicy tomato sauce.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/recipe3.jpg" alt="Israeli salad on a plate">
+        <h2>Israeli salad</h2>
+        <p>Fresh tomatoes, cucumbers and onion.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/recipe4.jpg" alt="Falafel balls">
+        <h2>Falafel</h2>
+        <p>Crispy chickpea balls.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/recipe5.jpg" alt="Garlic pasta">
+        <h2>Garlic pasta</h2>
+        <p>Pasta with garlic and olive oil.</p>
+      </article>
+
+      <article class="card">
+        <img src="images/recipe6.jpg" alt="Herb omelette">
+        <h2>Herb omelette</h2>
+        <p>Eggs with fresh herbs.</p>
+      </article>
+    </section>
+
+    <!-- TABLEAU : comparaison des recettes -->
+    <section>
+      <h2>Quick comparison</h2>
+      <table>
+        <caption>Time and difficulty of each recipe</caption>
+        <thead>
+          <tr>
+            <th>Recipe</th>
+            <th>Time</th>
+            <th>Difficulty</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hummus</td>
+            <td>15 min</td>
+            <td>Easy</td>
+          </tr>
+          <tr>
+            <td>Shakshuka</td>
+            <td>30 min</td>
+            <td>Easy</td>
+          </tr>
+          <tr>
+            <td>Falafel</td>
+            <td>45 min</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>Garlic pasta</td>
+            <td>20 min</td>
+            <td>Easy</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- EMBED : affiche un PDF (le livret de recettes) -->
+    <section>
+      <h2>Recipe booklet</h2>
+      <embed src="files/booklet.pdf" type="application/pdf" width="100%" height="400">
+    </section>
+  </main>
+
+  <!-- PIED DE PAGE commun : liens externes vers des sites d'apprentissage -->
+  <footer>
+    <p>Learn web development:</p>
+    <ul>
+      <li><a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy</a></li>
+      <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
+      <li><a href="https://scrimba.com" target="_blank" rel="noopener">Scrimba</a></li>
+      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></li>
+      <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+    </ul>
+    <p>&copy; 2026 My Kitchen</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- Page 2 de Personne B : "About" + audio + formulaire de contact -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About and contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">My Kitchen</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="recettes.html">Recipes</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About us</h1>
+    <p>We share simple recipes that we have tested at home.</p>
+
+    <!-- AUDIO : un message de bienvenue -->
+    <h2>Welcome message</h2>
+    <audio controls>
+      <source src="audio/welcome.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+
+    <!-- FORMULAIRE : chaque champ a un label relié par for / id -->
+    <h2>Contact us</h2>
+    <form action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject">
+        <option value="recipe">A recipe</option>
+        <option value="question">A question</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+<fieldset>
+  <legend>Your favourite meal</legend>
+  <input type="radio" id="breakfast" name="meal" value="breakfast">
+  <label for="breakfast">Breakfast</label>
+  <input type="radio" id="dinner" name="meal" value="dinner">
+  <label for="dinner">Dinner</label>
+</fieldset>
+
+<label>
+  <input type="checkbox" name="newsletter" value="yes">
+  Send me new recipes
+</label>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Learn web development:</p>
+    <ul>
+      <li><a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy</a></li>
+      <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
+      <li><a href="https://scrimba.com" target="_blank" rel="noopener">Scrimba</a></li>
+      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></li>
+      <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+    </ul>
+    <p>&copy; 2026 My Kitchen</p>
+  </footer>
+
+</body>
+</html>
