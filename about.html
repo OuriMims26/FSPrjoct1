@@ -1,82 +1,128 @@
 <!DOCTYPE html>
-<!-- Page 2 de Personne B : "About" + audio + formulaire de contact -->
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About and contact</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>המטבח שלנו - עלינו ויצירת קשר</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
   <header class="site-header">
-    <a href="index.html" class="logo">My Kitchen</a>
+    <a class="logo" href="index.html">
+      <span class="logo-top">
+        <img src="images/web/olive-branch.webp" alt="" class="logo-icon">
+        <strong class="logo-title">המטבח שלנו</strong>
+      </span>
+      <span class="logo-subtitle">מתכונים מהמטבח היהודי תוניסאי</span>
+    </a>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recettes.html">Recipes</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+      <a href="index.html">בית</a>
+      <a href="recettes.html">אוסף המתכונים</a>
+      <a href="about.html" class="active">עלינו ויצירת קשר</a>
     </nav>
   </header>
 
   <main>
-    <h1>About us</h1>
-    <p>We share simple recipes that we have tested at home.</p>
+    <section>
+      <h1 class="section-title">עלינו</h1>
+      <div class="row">
+        <div class="column">
+          <p>באתר הזה אספנו שישה מתכונים שאנחנו אוהבים להכין בבית, מתבשילים ארוכים ועד מאפים וסלטים.</p>
+          <p>ניסינו לכתוב כל מתכון בצורה קצרה וברורה כדי שיהיה נוח לעקוב אחריו בזמן הבישול.</p>
+          <img src="images/web/olive-branch.webp" alt="" class="branch">
+        </div>
+        <img src="images/web/making-couscous.webp" alt="הכנת קוסקוס בקערה" class="wide">
+      </div>
+    </section>
 
-    <!-- AUDIO : un message de bienvenue -->
-    <h2>Welcome message</h2>
-    <audio controls>
-      <source src="audio/welcome.mp3" type="audio/mpeg">
-      Your browser does not support audio.
-    </audio>
+    <section class="welcome">
+      <h2 class="section-title">הודעת פתיחה</h2>
+      <p>אפשר לשמוע את הודעת הפתיחה של האתר כאן:</p>
+      <audio controls>
+        <source src="audio/welcome-he.m4a" type="audio/mp4">
+        הדפדפן לא תומך בנגן אודיו.
+      </audio>
+      <p><a href="audio/welcome-he.m4a" download>הורדת קובץ האודיו</a></p>
+    </section>
 
-    <!-- FORMULAIRE : chaque champ a un label relié par for / id -->
-    <h2>Contact us</h2>
-    <form action="#" method="post">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+    <section class="center">
+      <h2 class="section-title">מפה</h2>
+      <p>מקור רוב המתכונים באתר הוא מהמטבח התוניסאי.</p>
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=9.8%2C33.6%2C11.3%2C37.0&layer=mapnik" height="300" title="מפת תוניסיה"></iframe>
+    </section>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <section class="row contact">
+      <div class="wide">
+        <h2>צרו איתנו קשר</h2>
+        <p>יש לכם מתכון שתרצו לשתף או שאלה? מלאו את הטופס:</p>
+        <form action="about.html" method="get">
+          <label for="name">שם מלא</label>
+          <input type="text" id="name" name="name" required>
 
-      <label for="subject">Subject</label>
-      <select id="subject" name="subject">
-        <option value="recipe">A recipe</option>
-        <option value="question">A question</option>
-        <option value="other">Other</option>
-      </select>
+          <label for="email">דואר אלקטרוני</label>
+          <input type="email" id="email" name="email" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-<fieldset>
-  <legend>Your favourite meal</legend>
-  <input type="radio" id="breakfast" name="meal" value="breakfast">
-  <label for="breakfast">Breakfast</label>
-  <input type="radio" id="dinner" name="meal" value="dinner">
-  <label for="dinner">Dinner</label>
-</fieldset>
+          <label for="subject">נושא הפנייה</label>
+          <select id="subject" name="subject">
+            <option value="recipe">שיתוף מתכון</option>
+            <option value="question">שאלה על מתכון</option>
+            <option value="other">נושא אחר</option>
+          </select>
 
-<label>
-  <input type="checkbox" name="newsletter" value="yes">
-  Send me new recipes
-</label>
+          <label for="message">הודעה</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Send</button>
-    </form>
+          <fieldset>
+            <legend>מה הניסיון שלכם במטבח?</legend>
+            <label><input type="radio" class="choice" name="experience" value="beginner"> מתחילים</label>
+            <label><input type="radio" class="choice" name="experience" value="experienced"> מבשלים כבר שנים</label>
+          </fieldset>
+
+          <label><input type="checkbox" class="choice" name="newsletter" value="yes"> אשמח לקבל מתכונים חדשים</label>
+
+          <button type="submit">שליחה</button>
+          <button type="reset">ניקוי</button>
+        </form>
+        <p class="note">הטופס באתר הוא לתרגול בלבד ולא שולח הודעות.</p>
+      </div>
+
+      <aside class="column">
+        <h3>רעיונות להודעה</h3>
+        <ul>
+          <li>מתכון משפחתי שאתם אוהבים</li>
+          <li>תיקון או הצעה למתכון קיים</li>
+          <li>שאלה על אחד המצרכים</li>
+        </ul>
+        <img src="images/web/boulou.webp" alt="פרוסות עוגת בולו עם שקדים">
+      </aside>
+    </section>
   </main>
 
   <footer>
-    <p>Learn web development:</p>
-    <ul>
-      <li><a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy</a></li>
-      <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
-      <li><a href="https://scrimba.com" target="_blank" rel="noopener">Scrimba</a></li>
-      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></li>
-      <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
-    </ul>
-    <p>&copy; 2026 My Kitchen</p>
+    <div class="footer-top">
+      <a class="logo" href="index.html">
+        <span class="logo-top">
+          <img src="images/web/olive-branch.webp" alt="" class="logo-icon">
+          <strong class="logo-title">המטבח שלנו</strong>
+        </span>
+        <span class="logo-subtitle">מתכונים מהמטבח היהודי תוניסאי</span>
+      </a>
+      <nav>
+        <a href="index.html">בית</a>
+        <a href="recettes.html">אוסף המתכונים</a>
+        <a href="about.html" class="active">עלינו ויצירת קשר</a>
+      </nav>
+    </div>
+    <p>2026 המטבח שלנו</p>
+    <p class="learning-links">
+      מקורות לימוד:
+        <a href="https://developer.mozilla.org/" target="_blank">MDN</a> |
+        <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> |
+        <a href="https://www.codecademy.com/" target="_blank">Codecademy</a> |
+        <a href="https://scrimba.com/" target="_blank">Scrimba</a> |
+        <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+    </p>
   </footer>
-
 </body>
 </html>

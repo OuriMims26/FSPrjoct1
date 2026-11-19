@@ -1,47 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Kitchen</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>המטבח שלנו - דף הבית</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
-    <a href="index.html" class="logo">My Kitchen</a>
+    <a class="logo" href="index.html">
+      <span class="logo-top">
+        <img src="images/web/olive-branch.webp" alt="" class="logo-icon">
+        <strong class="logo-title">המטבח שלנו</strong>
+      </span>
+      <span class="logo-subtitle">מתכונים מהמטבח היהודי תוניסאי</span>
+    </a>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recettes.html">Recipes</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+      <a href="index.html" class="active">בית</a>
+      <a href="recettes.html">אוסף המתכונים</a>
+      <a href="about.html">עלינו ויצירת קשר</a>
     </nav>
   </header>
 
   <main>
-    <h1>Welcome to My Kitchen</h1>
-    <p>Simple, tasty recipes for everyday cooking.</p>
+    <section class="row hero">
+      <div class="column">
+        <h1>טעמים שעוברים מדור לדור</h1>
+        <p>מתכונים תוניסאיים שמכינים אצלנו בבית.</p>
+        <p><a class="button" href="recettes.html#pkaila">למתכון הפקיילה &larr;</a></p>
+        <p><a href="recettes.html">לכל המתכונים</a></p>
+        <img src="images/web/olive-branch.webp" alt="" class="branch">
+      </div>
+      <img src="images/web/pkaila.webp" alt="סיר פקיילה עם בשר ושעועית לבנה" class="wide">
+    </section>
+
+    <section class="home-intro">
+      <h2 class="section-title">מה יש באתר</h2>
+      <p>שישה מתכונים פשוטים שאנחנו מכינים בבית, עם רשימת מצרכים וזמני הכנה.</p>
+    </section>
 
     <section>
-      <h2>Featured recipe</h2>
-      <article class="card">
-        <img src="images/recipe2.jpg" alt="Shakshuka in a pan">
-        <h3>Shakshuka</h3>
-        <p>Eggs cooked in a fragrant tomato sauce with spices and herbs.</p>
-      </article>
+      <h2 class="section-title">מה מבשלים אצלנו</h2>
+      <div class="cards">
+        <article class="recipe-card">
+          <a href="recettes.html#couscous">
+            <img src="images/web/couscous.webp" alt="צלחת קוסקוס עם בשר וירקות">
+          </a>
+          <h3>קוסקוס של שבת</h3>
+          <p>קוסקוס עם מרק ירקות ובשר, מתאים לארוחת שישי.</p>
+          <a href="recettes.html#couscous">למתכון</a>
+        </article>
+
+        <article class="recipe-card">
+          <a href="recettes.html#brik">
+            <img src="images/web/brik.webp" alt="בריק מטוגן עם טונה וביצה">
+          </a>
+          <h3>בריק פריך</h3>
+          <p>עלה דק ממולא בפירה, טונה וביצה ומטוגן במחבת.</p>
+          <a href="recettes.html#brik">למתכון</a>
+        </article>
+
+        <article class="recipe-card">
+          <a href="recettes.html#boulou">
+            <img src="images/web/boulou.webp" alt="פרוסות עוגת בולו עם שקדים">
+          </a>
+          <h3>בולו ליד הקפה</h3>
+          <p>עוגה יבשה עם שקדים וצימוקים.</p>
+          <a href="recettes.html#boulou">למתכון</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="column">
+        <h2>הסיפור של המטבח</h2>
+        <p>בנינו את האתר כדי לרכז במקום אחד כמה מתכונים שאנחנו מכינים הרבה בבית, בלי לחפש כל פעם מחדש כמויות וזמני בישול.</p>
+        <p>בעמוד עלינו אפשר גם לשמוע הודעה קצרה, לראות מפה ולשלוח לנו מתכונים משלכם.</p>
+        <p><a href="about.html">קצת עלינו &larr;</a></p>
+        <img src="images/web/olive-branch.webp" alt="" class="branch">
+      </div>
+      <img src="images/web/making-couscous.webp" alt="הכנת קוסקוס בקערה" class="wide">
     </section>
   </main>
 
   <footer>
-    <p>Learn web development:</p>
-    <ul>
-      <li><a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy</a></li>
-      <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
-      <li><a href="https://scrimba.com" target="_blank" rel="noopener">Scrimba</a></li>
-      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></li>
-      <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
-    </ul>
-    <p>&copy; 2026 My Kitchen</p>
+    <div class="footer-top">
+      <a class="logo" href="index.html">
+        <span class="logo-top">
+          <img src="images/web/olive-branch.webp" alt="" class="logo-icon">
+          <strong class="logo-title">המטבח שלנו</strong>
+        </span>
+        <span class="logo-subtitle">מתכונים מהמטבח היהודי תוניסאי</span>
+      </a>
+      <nav>
+        <a href="index.html" class="active">בית</a>
+        <a href="recettes.html">אוסף המתכונים</a>
+        <a href="about.html">עלינו ויצירת קשר</a>
+      </nav>
+    </div>
+    <p>2026 המטבח שלנו</p>
+    <p class="learning-links">
+      מקורות לימוד:
+        <a href="https://developer.mozilla.org/" target="_blank">MDN</a> |
+        <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> |
+        <a href="https://www.codecademy.com/" target="_blank">Codecademy</a> |
+        <a href="https://scrimba.com/" target="_blank">Scrimba</a> |
+        <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+    </p>
   </footer>
 </body>
 </html>

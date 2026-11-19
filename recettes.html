@@ -1,132 +1,392 @@
 <!DOCTYPE html>
-<!-- Page 1 de Personne B : la galerie de recettes (Grid) + le tableau comparatif + le PDF -->
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <!-- Obligatoire pour que le site s'adapte aux téléphones -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipes</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>המטבח שלנו - מתכונים</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- En-tête commun : même menu sur toutes les pages -->
   <header class="site-header">
-    <a href="index.html" class="logo">My Kitchen</a>
+    <a class="logo" href="index.html">
+      <span class="logo-top">
+        <img src="images/web/olive-branch.webp" alt="" class="logo-icon">
+        <strong class="logo-title">המטבח שלנו</strong>
+      </span>
+      <span class="logo-subtitle">מתכונים מהמטבח היהודי תוניסאי</span>
+    </a>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recettes.html">Recipes</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
+      <a href="index.html">בית</a>
+      <a href="recettes.html" class="active">אוסף המתכונים</a>
+      <a href="about.html">עלינו ויצירת קשר</a>
     </nav>
   </header>
 
   <main>
-    <h1>All our recipes</h1>
-    <p>Six simple recipes you can make at home.</p>
-
-    <div class="intro">
-  <aside class="tip">
-    <h3>Tip</h3>
-    <p>Make the <span class="highlight">hummus</span> the day before for a stronger taste.</p>
-  </aside>
-</div>
-    <!-- GALERIE : display: grid. Chaque recette est un <article> -->
-    <section class="gallery">
-      <article class="card">
-        <img src="images/recipe1.jpg" alt="A bowl of hummus with olive oil">
-        <h2>Hummus</h2>
-        <p>Chickpeas, tahini, lemon.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/recipe2.jpg" alt="Shakshuka in a pan">
-        <h2>Shakshuka</h2>
-        <p>Eggs in a spicy tomato sauce.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/recipe3.jpg" alt="Israeli salad on a plate">
-        <h2>Israeli salad</h2>
-        <p>Fresh tomatoes, cucumbers and onion.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/recipe4.jpg" alt="Falafel balls">
-        <h2>Falafel</h2>
-        <p>Crispy chickpea balls.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/recipe5.jpg" alt="Garlic pasta">
-        <h2>Garlic pasta</h2>
-        <p>Pasta with garlic and olive oil.</p>
-      </article>
-
-      <article class="card">
-        <img src="images/recipe6.jpg" alt="Herb omelette">
-        <h2>Herb omelette</h2>
-        <p>Eggs with fresh herbs.</p>
-      </article>
+    <section class="page-heading" id="collection">
+      <h1>אוסף המתכונים</h1>
+      <p>שישה מתכונים ביתיים עם מצרכים וזמני הכנה.</p>
+      <nav>
+        <a href="#pkaila">תבשילים</a>
+        <a href="#brik">מאפים</a>
+        <a href="#boulou">משהו מתוק</a>
+        <a href="#hummus">לצד הסיר</a>
+      </nav>
     </section>
 
-    <!-- TABLEAU : comparaison des recettes -->
     <section>
-      <h2>Quick comparison</h2>
-      <table>
-        <caption>Time and difficulty of each recipe</caption>
-        <thead>
-          <tr>
-            <th>Recipe</th>
-            <th>Time</th>
-            <th>Difficulty</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hummus</td>
-            <td>15 min</td>
-            <td>Easy</td>
-          </tr>
-          <tr>
-            <td>Shakshuka</td>
-            <td>30 min</td>
-            <td>Easy</td>
-          </tr>
-          <tr>
-            <td>Falafel</td>
-            <td>45 min</td>
-            <td>Medium</td>
-          </tr>
-          <tr>
-            <td>Garlic pasta</td>
-            <td>20 min</td>
-            <td>Easy</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2 class="section-title">בוחרים מתכון</h2>
+      <div class="cards">
+        <article class="recipe-card">
+          <a href="#pkaila">
+            <img src="images/web/pkaila.webp" alt="סיר פקיילה עם בשר ושעועית לבנה">
+          </a>
+          <h3>פקיילה</h3>
+          <p>תבשיל תרד כהה עם שעועית לבנה ובשר בקר.</p>
+          <a href="#pkaila">למתכון</a>
+        </article>
+        <article class="recipe-card">
+          <a href="#couscous">
+            <img src="images/web/couscous.webp" alt="צלחת קוסקוס עם בשר וירקות">
+          </a>
+          <h3>קוסקוס של שבת</h3>
+          <p>קוסקוס עם מרק ירקות, חומוס ובשר בקר.</p>
+          <a href="#couscous">למתכון</a>
+        </article>
+        <article class="recipe-card">
+          <a href="#brik">
+            <img src="images/web/brik.webp" alt="בריק מטוגן עם טונה וביצה">
+          </a>
+          <h3>בריק פריך</h3>
+          <p>עלה דק ממולא בתפוח אדמה, טונה וביצה.</p>
+          <a href="#brik">למתכון</a>
+        </article>
+        <article class="recipe-card">
+          <a href="#boulou">
+            <img src="images/web/boulou.webp" alt="פרוסות עוגת בולו עם שקדים">
+          </a>
+          <h3>בולו ליד הקפה</h3>
+          <p>עוגה יבשה עם שקדים, צימוקים ותפוז.</p>
+          <a href="#boulou">למתכון</a>
+        </article>
+        <article class="recipe-card">
+          <a href="#hummus">
+            <img src="images/web/hummus.webp" alt="צלחת חומוס עם שמן זית">
+          </a>
+          <h3>חומוס ביתי</h3>
+          <p>ממרח חומוס פשוט עם טחינה ולימון.</p>
+          <a href="#hummus">למתכון</a>
+        </article>
+        <article class="recipe-card">
+          <a href="#salad">
+            <img src="images/web/salad.webp" alt="סלט ירקות קצוץ">
+          </a>
+          <h3>סלט קצוץ</h3>
+          <p>עגבניות, מלפפונים, בצל ופטרוזיליה קצוצים דק.</p>
+          <a href="#salad">למתכון</a>
+        </article>
+      </div>
     </section>
 
-    <!-- EMBED : affiche un PDF (le livret de recettes) -->
     <section>
-      <h2>Recipe booklet</h2>
-      <embed src="files/booklet.pdf" type="application/pdf" width="100%" height="400">
+      <h2 class="section-title">השוואה מהירה</h2>
+      <div class="table-scroll">
+        <table>
+          <caption>זמן הכנה וכמות לכל מתכון</caption>
+          <thead>
+            <tr>
+              <th>מנה</th>
+              <th>סוג</th>
+              <th>זמן הכנה</th>
+              <th>כמות</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr><td><a href="#pkaila">פקיילה</a></td><td>תבשילים</td><td>3 שעות</td><td>6 מנות</td></tr>
+          <tr><td><a href="#couscous">קוסקוס של שבת</a></td><td>תבשילים</td><td>שעה וחצי</td><td>6 מנות</td></tr>
+          <tr><td><a href="#brik">בריק פריך</a></td><td>מאפים</td><td>30 דקות</td><td>4 יחידות</td></tr>
+          <tr><td><a href="#boulou">בולו ליד הקפה</a></td><td>משהו מתוק</td><td>שעה</td><td>2 כיכרות</td></tr>
+          <tr><td><a href="#hummus">חומוס ביתי</a></td><td>לצד הסיר</td><td>15 דקות</td><td>4 מנות</td></tr>
+          <tr><td><a href="#salad">סלט קצוץ</a></td><td>לצד הסיר</td><td>15 דקות</td><td>4 מנות</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+
+    <section>
+      <h2 class="section-title">חוברת המתכונים להדפסה</h2>
+      <embed src="files/booklet.pdf" type="application/pdf" width="100%" height="420">
+      <p class="center"><a href="files/booklet.pdf" download>להורדת חוברת המתכונים (PDF)</a></p>
+    </section>
+
+    <article class="recipe-detail" id="pkaila">
+      <div class="row">
+        <div class="column">
+          <p>תבשילים</p>
+          <h2>פקיילה</h2>
+          <p>תבשיל תרד כהה עם שעועית לבנה ובשר בקר.</p>
+          <p>3 שעות | 6 מנות</p>
+        </div>
+        <img src="images/web/pkaila.webp" alt="סיר פקיילה עם בשר ושעועית לבנה" class="wide">
+      </div>
+      <div class="row recipe-body">
+        <div class="column">
+          <h3>מצרכים</h3>
+          <ul>
+            <li>1 ק"ג בשר בקר לבישול ארוך חתוך לקוביות</li>
+            <li>500 גרם תרד שטוף וקצוץ</li>
+            <li>2 כוסות שעועית לבנה מבושלת</li>
+            <li>1 בצל קצוץ</li>
+            <li>4 שיני שום קצוצות</li>
+            <li>רבע כוס שמן זית</li>
+            <li>1 כפית כמון</li>
+            <li>מלח ופלפל</li>
+            <li>מים לכיסוי הבשר</li>
+          </ul>
+        </div>
+        <div class="wide">
+          <h3>הוראות הכנה</h3>
+          <ol>
+            <li>מחממים שמן בסיר רחב, מוסיפים את התרד ומבשלים על אש נמוכה כ-30 דקות עד שהוא מתכהה ומצטמצם.</li>
+            <li>מוסיפים בצל ומטגנים 5 דקות, ואז מוסיפים שום ובשר ומערבבים.</li>
+            <li>מוסיפים כמון, פלפל ומים לכיסוי הבשר. מרתיחים, מכסים ומבשלים שעתיים על אש קטנה.</li>
+            <li>מוסיפים את השעועית לעוד 20 דקות, ממליחים ומגישים עם קוסקוס או לחם.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="tip">
+        <h3>הערה</h3>
+        <p>אם מכינים יום לפני הארוחה ומחממים למחרת, הטעם יוצא יותר טוב.</p>
+      </aside>
+      <p><a href="#collection">חזרה למעלה &uarr;</a></p>
+    </article>
+    <article class="recipe-detail" id="couscous">
+      <div class="row">
+        <div class="column">
+          <p>תבשילים</p>
+          <h2>קוסקוס של שבת</h2>
+          <p>קוסקוס עם מרק ירקות, חומוס ובשר בקר.</p>
+          <p>שעה וחצי | 6 מנות</p>
+        </div>
+        <img src="images/web/couscous.webp" alt="צלחת קוסקוס עם בשר וירקות" class="wide">
+      </div>
+      <div class="row recipe-body">
+        <div class="column">
+          <h3>מצרכים</h3>
+          <ul>
+            <li>500 גרם קוסקוס להכנה מהירה</li>
+            <li>600 גרם בשר בקר בקוביות</li>
+            <li>1 בצל חצוי</li>
+            <li>3 גזרים חתוכים</li>
+            <li>2 קישואים חתוכים</li>
+            <li>300 גרם דלעת בקוביות</li>
+            <li>1 כוס חומוס מבושל</li>
+            <li>2 כפות שמן</li>
+            <li>חצי כפית כורכום</li>
+            <li>מלח, פלפל ומים</li>
+          </ul>
+        </div>
+        <div class="wide">
+          <h3>הוראות הכנה</h3>
+          <ol>
+            <li>מחממים שמן בסיר ומשחימים מעט את הבצל והבשר.</li>
+            <li>מוסיפים כורכום, פלפל ומים לכיסוי, מרתיחים ומבשלים מכוסה שעה על אש נמוכה.</li>
+            <li>מוסיפים גזר ודלעת ל-15 דקות, ואז קישואים וחומוס לעוד 15 דקות וממליחים.</li>
+            <li>מכינים את הקוסקוס לפי ההוראות על השקית ומגישים עם המרק.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="tip">
+        <h3>הערה</h3>
+        <p>את הקישואים כדאי להכניס אחרונים כדי שלא יהיו רכים מדי.</p>
+      </aside>
+      <p><a href="#collection">חזרה למעלה &uarr;</a></p>
+    </article>
+    <article class="recipe-detail" id="brik">
+      <div class="row">
+        <div class="column">
+          <p>מאפים</p>
+          <h2>בריק פריך</h2>
+          <p>עלה דק ממולא בתפוח אדמה, טונה וביצה.</p>
+          <p>30 דקות | 4 יחידות</p>
+        </div>
+        <img src="images/web/brik.webp" alt="בריק מטוגן עם טונה וביצה" class="wide">
+      </div>
+      <div class="row recipe-body">
+        <div class="column">
+          <h3>מצרכים</h3>
+          <ul>
+            <li>4 עלי בריק עגולים</li>
+            <li>1 תפוח אדמה מבושל ומעוך</li>
+            <li>1 קופסת טונה מסוננת</li>
+            <li>4 ביצים קטנות</li>
+            <li>2 כפות פטרוזיליה קצוצה</li>
+            <li>מלח ופלפל</li>
+            <li>שמן לטיגון</li>
+            <li>לימון להגשה</li>
+          </ul>
+        </div>
+        <div class="wide">
+          <h3>הוראות הכנה</h3>
+          <ol>
+            <li>מערבבים בקערה תפוח אדמה, טונה, פטרוזיליה, מלח ופלפל.</li>
+            <li>מחממים שמן במחבת. שמים רבע מהמילוי על חצי עלה בריק.</li>
+            <li>שוברים ביצה לתוך המילוי, מקפלים לחצי ומעבירים למחבת.</li>
+            <li>מטגנים 3 דקות מכל צד עד שזה זהוב, סופגים שמן עם נייר ומגישים עם לימון.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="tip">
+        <h3>הערה</h3>
+        <p>מכינים ומטגנים כל בריק בנפרד כדי שהעלה לא יירטב וייקרע.</p>
+      </aside>
+      <p><a href="#collection">חזרה למעלה &uarr;</a></p>
+    </article>
+    <article class="recipe-detail" id="boulou">
+      <div class="row">
+        <div class="column">
+          <p>משהו מתוק</p>
+          <h2>בולו ליד הקפה</h2>
+          <p>עוגה יבשה עם שקדים, צימוקים ותפוז.</p>
+          <p>שעה | 2 כיכרות</p>
+        </div>
+        <img src="images/web/boulou.webp" alt="פרוסות עוגת בולו עם שקדים" class="wide">
+      </div>
+      <div class="row recipe-body">
+        <div class="column">
+          <h3>מצרכים</h3>
+          <ul>
+            <li>3 כוסות קמח</li>
+            <li>2 כפיות אבקת אפייה</li>
+            <li>חצי כוס סוכר</li>
+            <li>2 ביצים</li>
+            <li>שליש כוס שמן</li>
+            <li>שליש כוס מיץ תפוזים</li>
+            <li>חצי כוס צימוקים</li>
+            <li>חצי כוס שקדים קצוצים</li>
+            <li>גרידה מתפוז אחד</li>
+          </ul>
+        </div>
+        <div class="wide">
+          <h3>הוראות הכנה</h3>
+          <ol>
+            <li>מחממים תנור ל-170 מעלות ושמים נייר אפייה בתבנית.</li>
+            <li>מערבבים קמח, אבקת אפייה וסוכר. מוסיפים ביצים, שמן, מיץ וגרידת תפוז ולשים לבצק.</li>
+            <li>מוסיפים צימוקים ושקדים ויוצרים שתי כיכרות מאורכות.</li>
+            <li>אופים 30 עד 40 דקות עד שזה זהוב, ומחכים שיתקרר לפני שפורסים.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="tip">
+        <h3>הערה</h3>
+        <p>אפשר להחזיר את הפרוסות לתנור ל-10 דקות אם רוצים אותן יותר פריכות.</p>
+      </aside>
+      <p><a href="#collection">חזרה למעלה &uarr;</a></p>
+    </article>
+    <article class="recipe-detail" id="hummus">
+      <div class="row">
+        <div class="column">
+          <p>לצד הסיר</p>
+          <h2>חומוס ביתי</h2>
+          <p>ממרח חומוס פשוט עם טחינה ולימון.</p>
+          <p>15 דקות | 4 מנות</p>
+        </div>
+        <img src="images/web/hummus.webp" alt="צלחת חומוס עם שמן זית" class="wide">
+      </div>
+      <div class="row recipe-body">
+        <div class="column">
+          <h3>מצרכים</h3>
+          <ul>
+            <li>2 כוסות גרגירי חומוס מבושלים</li>
+            <li>שליש כוס טחינה גולמית</li>
+            <li>3 כפות מיץ לימון</li>
+            <li>1 שן שום</li>
+            <li>רבע כפית כמון</li>
+            <li>מלח</li>
+            <li>רבע עד חצי כוס מים קרים</li>
+            <li>שמן זית להגשה</li>
+          </ul>
+        </div>
+        <div class="wide">
+          <h3>הוראות הכנה</h3>
+          <ol>
+            <li>שומרים כף גרגירי חומוס בצד ואת השאר טוחנים במעבד מזון עם טחינה, לימון, שום, כמון ומלח.</li>
+            <li>מוסיפים מים קרים בהדרגה תוך כדי טחינה עד שהמרקם חלק.</li>
+            <li>שמים בצלחת עם שמן זית ואת הגרגירים ששמרנו.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="tip">
+        <h3>הערה</h3>
+        <p>אפשר להכין גם מחומוס משימורים אחרי ששוטפים ומסננים אותו.</p>
+      </aside>
+      <p><a href="#collection">חזרה למעלה &uarr;</a></p>
+    </article>
+    <article class="recipe-detail" id="salad">
+      <div class="row">
+        <div class="column">
+          <p>לצד הסיר</p>
+          <h2>סלט קצוץ</h2>
+          <p>עגבניות, מלפפונים, בצל ופטרוזיליה קצוצים דק.</p>
+          <p>15 דקות | 4 מנות</p>
+        </div>
+        <img src="images/web/salad.webp" alt="סלט ירקות קצוץ" class="wide">
+      </div>
+      <div class="row recipe-body">
+        <div class="column">
+          <h3>מצרכים</h3>
+          <ul>
+            <li>3 עגבניות</li>
+            <li>3 מלפפונים</li>
+            <li>חצי בצל קטן</li>
+            <li>חופן פטרוזיליה</li>
+            <li>2 כפות מיץ לימון</li>
+            <li>2 כפות שמן זית</li>
+            <li>מלח ופלפל</li>
+          </ul>
+        </div>
+        <div class="wide">
+          <h3>הוראות הכנה</h3>
+          <ol>
+            <li>חותכים את העגבניות והמלפפונים לקוביות קטנות.</li>
+            <li>קוצצים בצל ופטרוזיליה ושמים הכל בקערה.</li>
+            <li>מוסיפים לימון, שמן זית, מלח ופלפל ומערבבים.</li>
+          </ol>
+        </div>
+      </div>
+      <aside class="tip">
+        <h3>הערה</h3>
+        <p>עדיף להוסיף את הלימון והמלח רק לפני ההגשה.</p>
+      </aside>
+      <p><a href="#collection">חזרה למעלה &uarr;</a></p>
+    </article>
   </main>
 
-  <!-- PIED DE PAGE commun : liens externes vers des sites d'apprentissage -->
   <footer>
-    <p>Learn web development:</p>
-    <ul>
-      <li><a href="https://www.codecademy.com" target="_blank" rel="noopener">Codecademy</a></li>
-      <li><a href="https://www.freecodecamp.org" target="_blank" rel="noopener">freeCodeCamp</a></li>
-      <li><a href="https://scrimba.com" target="_blank" rel="noopener">Scrimba</a></li>
-      <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener">MDN</a></li>
-      <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
-    </ul>
-    <p>&copy; 2026 My Kitchen</p>
+    <div class="footer-top">
+      <a class="logo" href="index.html">
+        <span class="logo-top">
+          <img src="images/web/olive-branch.webp" alt="" class="logo-icon">
+          <strong class="logo-title">המטבח שלנו</strong>
+        </span>
+        <span class="logo-subtitle">מתכונים מהמטבח היהודי תוניסאי</span>
+      </a>
+      <nav>
+        <a href="index.html">בית</a>
+        <a href="recettes.html" class="active">אוסף המתכונים</a>
+        <a href="about.html">עלינו ויצירת קשר</a>
+      </nav>
+    </div>
+    <p>2026 המטבח שלנו</p>
+    <p class="learning-links">
+      מקורות לימוד:
+        <a href="https://developer.mozilla.org/" target="_blank">MDN</a> |
+        <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> |
+        <a href="https://www.codecademy.com/" target="_blank">Codecademy</a> |
+        <a href="https://scrimba.com/" target="_blank">Scrimba</a> |
+        <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+    </p>
   </footer>
-
 </body>
 </html>
