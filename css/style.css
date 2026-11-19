@@ -95,7 +95,7 @@ nav a:hover, nav .active {
   text-decoration: none;
   transition: 0.2s;
 }
-.button:hover {
+.button:hover {/* qd survolement */
   background: #451619;
 }
 .section-title, .tip {
@@ -131,7 +131,7 @@ nav a:hover, nav .active {
 .recipe-body, .contact {
   align-items: flex-start;
 }
-.table-scroll {
+.table-scroll {/* conteneur autour du tableau*/
   overflow-x: auto;
 }
 table {
