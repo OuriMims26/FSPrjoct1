@@ -8,9 +8,9 @@ body {
   margin: auto;
   background: #f6e6d7;
   color: #392b25;
-  font-family: "Noto Serif Hebrew", serif;
+  font-family: "Noto Serif Hebrew", serif; /* police */
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.7; /*taille ligne 1,7 fois + que texte*/
 }
 img {
   display: block;
@@ -30,19 +30,19 @@ h3 {
   font-size: 24px;
 }
 p {
-  margin: 0 0 20px;
+  margin: 0 0 20px; /*haut, côtés, bas*/
 }
 
 /* כותרת, תפריט ושורות של שני טורים (Flexbox) */
 .site-header, .footer-top, .row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 24px 0;
+  justify-content: space-between;/*place les enfants aux extrémités de la rangée et distribue l’espace libre entre eux*/
+  gap: 30px;/*espace entre les enfants*/
+  padding: 24px 0;/*esp int haut,bas*/
 }
 .site-header {
-  border-bottom: 1px solid #642023;
+  border-bottom: 1px solid #642023;/* un trait bordeaux */
 }
 .column {
   width: 42%;
@@ -57,8 +57,8 @@ p {
 .logo-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  justify-content: center;/*place enfents */
+  gap: 10px;/*espace entre les enfants*/
 }
 .logo-icon {
   width: 60px;
@@ -174,7 +174,7 @@ button {
   background: #642023;
   color: white;
   border: 1px solid #642023;
-  cursor: pointer;
+  cursor: pointer;/*curseur forme main en survol */
   font: inherit;
 }
 audio {
